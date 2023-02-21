@@ -1,0 +1,137 @@
+/* stylelint-disable selector-class-pattern */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-out-down {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.select {
+  --corner-radius: 0.25rem;
+
+  z-index: 100;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-black) !important;
+}
+
+.select :global(.select__control) {
+  display: inline-flex;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0.87rem;
+  min-height: 2.62rem;
+}
+
+.select :global(.select__control) * {
+  color: black;
+}
+
+.select :global(.select__control:hover) {
+  border: none;
+}
+
+.select :global(.select__indicator-separator) {
+  display: none;
+}
+
+.select :global(.select__value-container) {
+  padding: 0;
+}
+
+.select :global(.select__single-value) {
+  color: inherit;
+  margin: 0;
+}
+
+.select :global(.select__indicators) {
+  margin-left: 0.25rem;
+}
+
+.select :global(.select__indicator) {
+  padding: 0;
+  color: #000000;
+}
+
+.select :global(.select__indicator:hover) {
+  color: inherit;
+}
+
+.select :global(.select__menu) {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-grey-40);
+  border-radius: var(--corner-radius);
+  box-shadow: none;
+  margin-top: 2px;
+  margin-bottom: 0;
+  animation: fade-in-up 0.2s;
+  width: var(--select-dropdown-width, 12rem);
+  left: 50%;
+  margin-left: calc(var(--select-dropdown-width, 100%) / -2);
+  color: #000000;
+}
+
+.select :global(.select__menu.menu-close) {
+  animation: fade-out-down 0.2s;
+}
+
+.select :global(.select__menu-list) {
+  padding-top: 0;
+  padding-bottom: 0;
+  max-height: 200px;
+}
+
+.select :global(.select__option) {
+  cursor: pointer;
+  padding: 0.75rem 0.87rem;
+  border-radius: var(--corner-radius);
+  color: inherit;
+  transition: background-color var(--default-duration);
+}
+
+.select :global(.select__option--is-selected),
+.select :global(.select__option--is-focused),
+.select :global(.select__option:active) {
+  background-color: var(--color-grey-40);
+}
+
+.select :global(.select__indicator > svg) {
+  transition: transform 0.2s;
+}
+
+.select :global(.select__control--menu-is-open .select__indicator > svg) {
+  transform: rotate(180deg);
+}
+
+.select :global(.select__menu-notice) {
+  text-align: left;
+}
+
+.select :global(.select__option--is-disabled) {
+  background-color: transparent;
+}

@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  padding: 0.125rem 0.25rem 0.125rem 1.25rem;
+  background-color: var(--color-grey-30);
+  border-radius: 5rem;
+}
+
+.wrapper .link {
+  display: flex;
+  margin-right: 3.125rem;
+}
+
+.wrapper .link .value {
+  color: var(--color-grey-60);
+  margin-left: 0.625rem;
+}
+
+.wrapper .copy {
+  display: flex;
+  align-items: center;
+  padding: 0.3125rem 1.25rem;
+  background-color: var(--color-blue-20);
+  border-radius: 0.9375rem;
+}
+
+.wrapper .copy .icon {
+  margin-right: 0.5625rem;
+}

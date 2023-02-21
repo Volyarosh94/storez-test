@@ -1,0 +1,5 @@
+.wrapper {
+  height: calc(100% - 4.0625rem);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}

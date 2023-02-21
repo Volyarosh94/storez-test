@@ -1,0 +1,33 @@
+.wrapper.xl {
+  font-size: 1rem;
+  line-height: 1.375rem;
+}
+
+.wrapper.m {
+  font-size: 0.875rem;
+  line-height: 1.375rem;
+}
+
+.wrapper.l {
+  font-size: 0.9375rem;
+  line-height: 1.25rem;
+}
+
+.wrapper.s {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.wrapper.xs {
+  font-size: 0.5625rem;
+  line-height: 0.875rem;
+}
+
+.wrapper.xxs {
+  font-size: 0.5rem;
+  line-height: 0.8125rem;
+}
+
+.wrapper.bold {
+  font-weight: 600;
+}
